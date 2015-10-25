@@ -1,0 +1,10 @@
+node_modules/
+public/components
+coverage
+shippable
+.sass-cache
+.idea
+*.iml
+*.log.*
+*.log
+xunit.xml
