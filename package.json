@@ -35,6 +35,7 @@
     "eslint-config-etaskr": "git+https://bitbucket.org/etaskr/eslint-config-etaskr.git",
     "istanbul": "^0.3.20",
     "mocha": "^2.3.2",
+    "nodemon": "^1.8.0",
     "should": "^7.1.0",
     "sinon": "^1.16.1",
     "spec-xunit-file": "0.0.1-3",
