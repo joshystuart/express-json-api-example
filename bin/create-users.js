@@ -3,6 +3,7 @@
  * @author Josh Stuart <joshstuartx@gmail.com>
  */
 var _ = require('lodash');
+var q = require('q');
 var DB = require('../lib/utils/db');
 var db = new DB();
 var User = require('../lib/models/user');
@@ -26,8 +27,14 @@ var users = [
 
 // init mongo connection
 db.connect().then(function() {
+    var deferreds = [];
     _.forEach(users, function(user) {
         var newUser = User(user);
-        newUser.save();
+        deferreds.push(q.ninvoke(newUser, 'save'));
     });
+
+    q.all(deferreds).
+        then(function() {
+            process.exit();
+        });
 });
