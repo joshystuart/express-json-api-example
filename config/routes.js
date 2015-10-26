@@ -3,7 +3,7 @@ var user = require('../lib/models/user');
 module.exports = {
     routes: [
         {
-            endpoint: '/user',
+            endpoint: '/users',
             model: user,
             limit: 20,
             id: '_id',
