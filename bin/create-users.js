@@ -29,12 +29,12 @@ var users = [
 db.connect().then(function() {
     var deferreds = [];
     _.forEach(users, function(user) {
-        var newUser = User(user);
+        var newUser = new User(user);
         deferreds.push(q.ninvoke(newUser, 'save'));
     });
 
     q.all(deferreds).
-        then(function() {
-            process.exit();
-        });
+    then(function() {
+        process.exit();
+    });
 });

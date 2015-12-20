@@ -7,7 +7,7 @@ var app = require('./lib/app');
 
 // init mongo connection
 db.connect().
-    then(function() {
-        // create express app and config
-        app.init();
-    });
+then(function() {
+    // create express app and config
+    app.init();
+});

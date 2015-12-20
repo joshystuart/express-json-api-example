@@ -22,6 +22,7 @@
     "express": "^4.13.3",
     "glob": "^5.0.3",
     "lodash": "^3.10.1",
+    "express-json-api": "^0.0.1",
     "method-override": "^2.3.0",
     "moment": "^2.10.6",
     "mongoose": "^4.1.2",
